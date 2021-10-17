@@ -1,0 +1,1246 @@
+@charset "utf-8";
+
+@import url(reset.css);
+
+
+/* *************** 레이아웃 구성시작 *************** */
+#intro{ height: 100vh; }
+
+.container, .container-fluid{ padding: 105px 0; }
+#navi .container, #footer .container{ padding: 0; }
+
+button{
+  font-size: 3rem;
+}
+/* *************** 공통영역 구성시작 **************** */
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+
+
+/* ScrollSpy 배경체인지 */
+#projects, #whatido{ background-color: #f6f9fc; }
+#about, #about2{ background-color: #fbf2ff; }
+
+/* 배경체인지 클래스 설정 */
+#projects, #whatido, #about, #about2{
+  -webkit-transition: all ease 0.8s;
+  -moz-transition: all ease 0.8s;
+  -o-transition: all ease 0.8s;
+  transition: all ease 0.8s;
+}
+
+.bg1{ background-color: #fbf2ff !important; }
+.bg2{ background-color: #f6f9fc !important; }
+
+
+/* Title Area Start */
+.title{
+  height: auto;
+  text-align: center;
+}
+.title h2{
+  height: 63px;
+  position: relative;
+  font: 700 5.3rem/21px 'Noto Serif SC', sans-serif;
+  letter-spacing: 1px;
+  color: #444;
+  margin-bottom: 84px;
+}
+.title h2::after{
+  display: block;
+  content: '';
+  width: 170px;
+  height: 4px;
+  background-color: #7b9acc;
+  position: absolute; bottom: 0; left: 50%;
+  margin-left: -85px;
+}
+
+/* 위로가기 lightbox버튼  */
+.lightbox_btn{
+  display: block;
+  width: 120px;
+  height: 65px;
+  border-radius: 10px 10px 0 0;
+  background-color: #7b9acc;
+  color: #fff !important;
+  font: 500 1.4em 'Spoqa Han Sans Neo', sans-serif; 
+  padding-top: 10px;
+  text-align: center;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+
+  -webkit-transition: all ease 0.6s;
+  -moz-transition: all ease 0.6s;
+  -o-transition: all ease 0.6s;
+  transition: all ease 0.6s;
+
+  position: fixed; right: -50px; top: 50%;
+  margin-top: -25px;
+}
+.lightbox_btn:hover{ right: -38px; color: #fff; }
+
+/* Button Settings */
+.btn{
+  display: inline-block;
+  height: 42px;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid #555;
+}
+/* content_popup 닫기버튼 설정 */
+.close-btn{
+  display: inline-block;
+  width: 120px;
+  height: 50px;
+  color: #2d2d2d;
+  text-align: center;
+  text-decoration: none;
+  font: 700 1.6rem/45px 'Noto Serif SC', serif;
+  border: 1px solid #888;
+  border-radius: 10px;
+  background-color: #f6f9fc;
+}
+.close-btn:hover{
+  background-color: #e2e2e2;
+}
+/* Gallery g-menu 활성화  */
+.gmenu-act{ 
+  background-color: #7b9acc !important;
+  color: #fff !important;
+  border-radius: 9px;
+}
+
+/* *************** Navi Area Start *************** */
+
+/* [ Gnb Default 셋팅 ] */
+#navi, #navi h1 a, #navi #gnb a{  
+  -webkit-transition: all ease 0.8s;
+  -moz-transition: all ease 0.8s;
+  -o-transition: all ease 0.8s;
+  transition: all ease 0.8s;
+}
+
+#navi{
+  background-color: transparent;
+}
+#navi h1 a{
+  font: bold 2.7rem/63px 'Lato', sans-serif;
+  color: #2d2d2d;
+  letter-spacing: 2px;
+}
+#navi h1>a>span{ color: #7b9acc !important; }
+.navbar{ border: 0; }
+#navi #gnb li a{
+  color: #2d2d2d;
+  font: 700 2.2rem 'Noto Serif SC', sans-serif;
+  
+  -webkit-transition: all ease 0.6s;
+  -moz-transition: all ease 0.6s;
+  -o-transition: all ease 0.6s;
+  transition: all ease 0.6s;
+}
+#navi #gnb li a:hover{ 
+  border-radius: 50%;
+  background-color: rgba(123,154,204,0.7); color: #fff;
+}
+
+/* [ Gnb Scroll 셋팅 ] */
+#navi.fixed{
+  background-color: #fff;
+  height: 63px;
+}
+#navi.fixed h1 a{
+  font: bold 2.7rem/63px 'Lato', sans-serif;
+  color: #2d2d2d;
+  letter-spacing: 2px;
+}
+#navi.fixed #gnb li a{
+  font: 700 2.2rem 'Noto Serif SC', sans-serif;
+  color: #2d2d2d;
+}
+#navi.fixed #gnb li a:hover{
+  border-radius: 50%;
+  background-color: rgba(123,154,204,0.7); 
+  color: #fff; 
+}
+.navbar-default .navbar-toggle{ margin: 0; }
+.navbar-default .navbar-toggle{
+  border: none;
+}
+/* [ Gnb Scrollspy 셋팅 ] */
+.navbar-default .navbar-nav>.active>a, 
+.navbar-default .navbar-nav>.active>a:focus, 
+.navbar-default .navbar-nav>.active>a:hover{ 
+  color: #7b9acc !important;
+  background-color: transparent;
+}
+
+
+/* *************** 개별영역 구성시작 *************** */
+
+/* Intro Area Start */
+#intro{
+  height: 100vh;
+  background: url(../images/lg/intro_bg.png) no-repeat top center;
+  background-size: cover !important;
+}
+
+#intro .intro-text{
+  width: 665px; height: 336px;
+  position: absolute;
+  left: 565px; top: 50%;
+  margin-top: -120px;
+} 
+#intro .intro-text h2{
+  font: 700 8rem/1.5 'Noto Serif SC', serif;
+  color: #707070;
+}
+#intro .intro-text h2 span{ color: #ededed; }
+#intro .intro-text h3{
+  font: 600 3.5rem/1.5 'Noto Serif SC', serif;
+  color: #2d2d2d;
+  margin-left: 95px;
+}
+#intro .intro-text p{
+  font: 500 2.3rem/40px 'Spoqa Han Sans Neo', 'sans-serif';
+  color: #555;
+  margin-top: 63px; 
+  margin-left: 95px;
+}
+
+#intro .container-fluid a{
+  font: bold 2.5rem 'Noto Serif SC', serif;
+  color: #2d2d2d;
+  position: absolute; 
+  left: 50%; bottom: 10%;
+  margin-left: -54px;
+  
+  -webkit-transition: all ease 0.8s;
+  -moz-transition: all ease 0.8s;
+  -o-transition: all ease 0.8s;
+  transition: all ease 0.8s;
+}
+
+/* intro 원 rellax  */
+.intro_circle1, .intro_circle2, .intro_circle3{
+  border-radius: 50%;
+  position: absolute;
+}
+
+.intro_circle1{ width: 520px; height: 520px; }
+.intro_circle2{ width: 400px; height: 400px; }
+.intro_circle3{ width: 300px; height: 300px; }
+
+.intro_circle1{
+  background-color: #ffd3cc; left: 0; top: 30%;
+  margin-left: -200px;
+  opacity: 0.65;
+}
+.intro_circle2{
+  background-color: #8baca5; right: 6%; top: 25%;
+  opacity: 0.55;
+}
+.intro_circle3{
+  background-color: #fbe3be; right: 6%; top: 8%;
+  opacity: 0.75;
+}
+
+
+/* Projects Area Start */
+
+/* g-menu */
+#projects .g-menu{
+  text-align: center;
+  margin-bottom: 63px;
+}
+#projects .g-menu li{
+  display: inline-block;
+  width: 120px; height: 50px;
+  border-radius: 10px;
+  background-color: #fff;
+  border: 1px solid #acacac;
+  margin-right: 30px;
+}
+#projects .g-menu li a{
+  display: block;
+  width: 100%; height: 100%;
+  font: bold 1.8rem/50px 'Noto Serif SC', serif;
+}
+
+/* Gallery */
+#projects #gallery{ width: 100%; height: auto; margin: auto; }
+#projects #gallery .grid-item{
+  position: relative; width: 23%;
+  margin: 0 1% 21px; 
+}
+
+#projects #gallery .grid-item img{ width: 100%; }
+#projects #gallery .grid-item .caption{
+  width: 100%; height: 100%;
+  display: block;
+  position: absolute; left: 0; top: 0;
+  text-align: center;
+  background-color: rgba(123,154,204, 0.7);
+  color: #fff;
+  opacity: 0;
+  border-radius: 10px;
+}
+#projects #gallery .grid-item .caption h3{
+  font: 700 2.4rem/40px 'Lato', sans-serif;
+  position: relative; top: 25%; 
+  color: #fff;
+}
+#projects #gallery .grid-item .caption h3 span{
+  display: block;
+  font-size: 2rem;
+}
+#projects #gallery .grid-item .caption i{
+  position: absolute;
+  right: 3%; bottom: 3%; 
+  font-size: 4rem;
+  color: #fff;
+}
+#projects #gallery .grid-item:hover .caption{ opacity: 1; }
+#projects #gallery .grid-item .caption{
+  -webkit-transition: all ease 0.6s;
+  -moz-transition: all ease 0.6s;
+  -o-transition: all ease 0.6s;
+  transition: all ease 0.6s;
+}
+
+
+/* projects - 콘텐트팝업 설정 */
+#projects .content{ position: relative; }
+
+/* content_popup 공통영역 */
+.white-popup{
+width: 80%;
+height: 950px;
+padding: 30px;
+background-color: #fff;
+margin: auto;
+position: relative;
+border-radius: 10px;
+}
+.mfp-auto-cursor .mfp-content{
+  padding: 50px 0;
+}
+.white-popup h2{
+  font: 700 3.6rem/1.5 'Noto Serif SC', serif;
+  margin: 30px auto 80px;
+  text-align: center;
+}
+
+.white-popup .right-box p{ margin-bottom: 50px; }
+.white-popup .right-box ul{margin-bottom: 63px; }
+
+/* popup > left-box */
+.white-popup .left-box{ float: left; }
+
+/* popup > right-box */
+.white-popup .right-box{ 
+  float: right;
+  width: 50%;
+  font: 500 2rem/35px 'Spoqa Han Sans Neo', serif;
+  padding: 50px;
+  position: absolute; right: 10%; top: 15%;
+}
+
+.white-popup .right-box .text{
+  font-size: 2rem;
+  color: #333;
+}
+.white-popup .right-box .text span, .white-popup .right-box a{
+  color: #555;
+}
+.white-popup .right-box .text i{
+  margin-left: 10px;
+  font-size: 1.9rem;
+  color: #555;
+}
+.white-popup .right-box .text a:hover{
+  text-decoration: underline;
+}
+.white-popup .right-box li{
+  margin-bottom: 10px;
+}
+
+.white-popup .link-icon{
+  width: 70px; height: 70px;
+  border-radius: 50%;
+  border: 3px solid #acacac;
+  text-align: center;
+  margin: 0 auto 10px;
+}
+.white-popup .right-box .text .link-icon i{
+  font-size: 4.1rem;
+  color: #7b9acc;
+  line-height: 70px;
+  margin-left: 0;
+}
+
+.white-popup .right-box .text .link-icon:hover{
+  background-color: #7b9acc;
+  border-color: #7b9acc;
+}
+.white-popup .right-box .text .link-icon:hover i{
+  color: #f6f9fc;
+}
+
+/* content_popup 개별영역 */
+#popup1 .left-box .pdf-btn{
+  left: 15%;
+}
+#popup1 .right-box .login{
+  margin-top: 30px;
+}
+#popup1 .right-box{
+  padding: 50px;
+  width: 41%;
+  height: auto;
+}
+#popup2 .right-box .text{
+  margin-bottom: 63px;
+}
+#popup2 h2{ margin-bottom: 20px !important; }
+#popup1 .right-box .login,
+#popup3 .right-box .login{
+  width: 280px;
+  height: auto;
+  padding: 20px;
+  text-align: center;
+  border-radius: 20px;
+  border: 2px solid #7b9acc;
+  font-size: 2rem;
+  margin: 30px auto;
+}
+#popup1 .right-box .text a,
+#popup3 .right-box .text a{
+  position: static;
+}
+
+
+/* About Area Start */
+#about{ height: auto; }
+
+/* name */
+#about .name{
+  margin-bottom: 42px;
+  text-align: right;
+  position: relative;
+  z-index: 10;
+}
+#about .name p{
+  font: bold 3.5rem/50px 'Spoqa Han Sans Neo', 'sans-serif';
+  color: #555;
+  letter-spacing: 2px;
+  position: absolute; left: 200px; 
+}
+#about .name p span{
+  display: block;
+  font: 500 3.2rem/21px 'Lato', sans-serif;
+}
+
+/* about > left-box */
+#about .left-box .text{
+  width: 340px; height: auto;
+  margin-top: 63px;
+}
+#about .left-box .text p{
+  margin-bottom: 21px;
+}
+#about .left-box p:nth-child(1){
+  font: bold 1.8rem/30px 'Spoqa Han Sans Neo', 'sans-serif';
+  color: #555;
+  width: 320px;
+}
+#about .left-box p:nth-child(2), #about .left-box p:nth-child(3){
+  font: 400 1.6rem/26px 'Spoqa Han Sans Neo', 'sans-serif';
+  color: #555;
+}
+#about .left-box a{
+  width: 170px;
+  font: 500 1.8rem 'Noto Serif SC', serif;
+  color: #555;
+  background-color: #fff;
+  position: absolute; left: 50%;
+  margin-top: 21px;
+  margin-left: -85px;
+}
+#about .left-box a:hover{
+  background-color: #e2e2e2;
+}
+
+/* about > img-box */
+#about .img-box img{
+  margin: -84px 0 0 -55px;
+  z-index: -1;
+}
+
+/* about > right-box */
+#about .right-box .skills-title{
+  height: 63px;
+  font: bold 3rem/30px 'Noto Serif SC', serif;
+  color: #555;
+  margin: -21px 0 0px 30px;
+}
+#about .right-box .skills-title img{ margin-right: 5px; }
+
+#about .right-box ul {
+  width: 100%;
+  height: auto;
+}
+#about .right-box ul li {
+  height: 63px;
+  margin-bottom: 21px;
+}
+#about .right-box ul li h3 {
+  height: 42px;
+  font: 500 2rem/42px 'Noto Serif SC', serif;
+  position: relative;
+  color: #555;
+}
+
+#about .right-box ul li h3 span {
+  display: inline-block;
+  font: bold 2rem/42px 'Noto Serif SC', serif;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+#about .right-box ul li .progress {
+  height: 15px;
+  border-radius: 20px;
+}
+
+#about .right-box ul li .progress-bar {
+  background-color: #7b9acc;
+  border-radius: 20px;
+}
+
+/* WhatIdoArea Start */
+#whatido{
+  width: 100%; height: auto; 
+  text-align: center;
+}
+#whatido .content>div{
+  width: 23%;
+  height: 210px;
+  margin: 0 1% 21px;
+  text-align: center;
+  border: 1px solid #000;
+  border-radius: 10px;
+  position: relative;
+  background-color: #fff;
+
+  -webkit-transition: all ease 0.8s;
+  -moz-transition: all ease 0.8s;
+  -o-transition: all ease 0.8s;
+  transition: all ease 0.8s;
+}
+#whatido .content>div>div{
+  width: 100%; 
+  height: 100%; 
+  padding: 42px 3px 21px;
+  border-radius: 10px;
+  background-color: #fff;
+  overflow: hidden;
+}
+#whatido .content>div>div .icon{ 
+  height: 60px; 
+  margin-bottom: 21px;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+#whatido .content>div>div h3{
+  height: 42px; 
+  text-align: center;
+  font: 500 2.1rem/30px 'Noto Serif SC', serif;
+  margin-bottom: 35px;
+}
+#whatido .content>div>div p{
+  font: 500 1.4rem/22px 'Spoqa Han Sans Neo', 'sans-serif';
+  color: #707070;
+  padding: 21px 30px;
+}
+#whatido .content>div>a{
+  width: 20px;
+  height: 20px;
+  font-size: 2.7rem;
+  color: #7b9acc;
+  position: absolute; left: 50%; bottom: -5px; margin-left: -17px;
+}
+
+/* Toggle Class */
+.toggle-act{ height: 340px !important; }
+.toggle-height{ margin-bottom: 155px !important; }
+
+/* About2 Area Start */
+#about2{ height: auto; }
+
+#about2 .content>div{
+  text-align: left;
+}
+#about2 .content>div>div{
+  margin-bottom: 42px;
+}
+#about2 .content h3>i{
+  color: #7b9acc;
+  font-size: 3rem;
+  margin-right: 10px;
+}
+#about2 .content h3{
+  font: 700 2.6rem/30px 'Noto Serif SC', serif;
+  color: #2d2d2d;
+  margin-bottom: 21px;
+}
+#about2 .content p{
+  font: 500 1.6rem/21px 'Spoqa Han Sans Neo', serif;
+  color: #555;
+}
+#about2 .content p span{
+  font-size: 1.4rem;
+}
+#about2 .content .date{
+  font: 400 italic 1.4rem 'Lato', sans-serif;
+  margin-bottom: 24px;
+}
+#about2 .content .right-box .menu3>p{
+  font: 400 1.5rem/27px 'Spoqa Han Sans Neo', serif;
+  color: #2d2d2d;
+  padding-right: 70px; 
+}
+#about2 .content .right-box .menu4+p{
+  font: bold 1.6rem/30px 'Lato', sans-serif;
+}
+
+/* Banner Area Start */
+#banner{
+  height: 463px; 
+  text-align: center;
+  background: url(../images/lg/banner.png) no-repeat top center;
+  color: #fff;
+}
+#banner p{
+  padding: 0 90px;
+  font: 500 4.4rem/70px 'Noto Serif SC', serif;
+}
+#banner a{
+  border-color: #fff;
+  color: #fff;
+  font: 500 1.8rem 'Noto Serif SC', serif;
+  width: 160px;
+  margin-top: 42px;
+}
+#banner a:hover{
+  background-color: rgba(255,255,255, 0.5);
+  color: #2d2d2d;
+}
+
+
+/* Contact Area Start */
+#map_canvas{
+  width: 400px;
+  height: 210px;
+  margin-bottom: 42px;
+}
+#contact{
+  height: auto;
+  background-color: #f6f9fc;
+  position: relative;
+}
+
+#contact .address li{
+  display: block;
+  font: 600 1.6rem/30px 'Noto Serif SC', serif;
+  color: #2d2d2d;
+}
+#contact .address li span{
+  font: 500 1.6rem/30px 'Spoqa Han Sans Neo', serif;
+}
+#contact .address li>i{
+  color: #7b9acc;
+  font-size: 2.4rem;
+  margin-right: 10px;
+}
+
+#contact .btn{
+  margin: auto; 
+  background-color: #7b9acc;
+  color: #fff;
+  border: 1px solid #7b9acc;
+  font: 400 1.7rem 'Noto Serif SC', serif;
+  position: relative; left: 50%;
+  margin: 42px 0 0 -71px;
+}
+#contact .btn:hover{
+  background-color: transparent;
+  color: #7b9acc;
+  border: 2px solid #7b9acc;
+}
+
+#contact .top-btn{
+  font-size: 3.6rem;
+  color: #707070;
+  position: absolute; left: 50%; bottom: 3%;
+  margin-left: -16px;
+}
+#contact .top-btn:hover{
+  color: #E2D0F9;
+}
+
+/* Footer Area Start */
+#footer{
+  height: 105px;
+  background-color: #7b9acc;
+  padding: 42px 0;
+  text-align: center;
+}
+#footer p{
+  font: 500 2.1rem/21px 'Lato', sans-serif;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+/* ******** Media Query Area Start ******** */
+@media screen and (min-width:1200px) and (max-width:1699px){
+  #intro .intro-text{
+    left: 25%;
+    top: 45%;
+  }
+}
+
+/* Desktop Device */ 
+@media screen and (max-width: 1199px) {
+
+  /* ***** 레이아웃 구성시작 ***** */
+  .container{ width: 930px; }
+  .col-md-6{ width: 50%; }
+
+
+  /* ***** 개별영역 구성시작 ***** */
+  /* Intro Area Start */
+  #intro{
+    height: 100vh;
+    background-size: cover !important;
+    background: url(../images/md/intro_bg.png) no-repeat top center;
+  }
+
+  #intro .intro-text{
+    left: 190px; 
+    margin-top: -110px;
+  }
+  #intro .intro_circle2{ right: 0; }
+  #intro .intro_circle3{ right: 2%; }
+  #intro .intro-text p{
+    font-size: 2rem;
+    line-height: 35px;
+  }
+  #intro .container-fluid a{
+    font-size: 2.2rem;
+  }
+  /* Projects Area Start */
+  #projects #gallery .grid-item .caption i{
+    font-size: 3rem;
+  }
+  #projects #gallery .grid-item .caption h3{
+    font-size: 2.2rem;
+    line-height: 35px;
+  }
+  /* About Area Start */
+  #about .name{ margin-left: 65px; }
+  #about .left-box{ padding-left: 80px; }
+  #about .right-box{
+    margin-top: 84px;
+    padding: 0 80px;
+  }
+  #about .right-box .skills-title{
+    text-align: center;
+  }
+  #about .right-box .name{
+    left: 29%;
+  }
+  #about .left-box a{
+    margin-left: 0;
+  }
+  
+
+  /* whatIdo Area Start */
+  #whatido .content>div a i{
+    margin-left: 4px;
+  }
+  #whatido .content>div>div p{
+    padding: 21px 15px;
+  }
+
+  /* About2 Area Start */
+  #about2 .content .left-box{
+    padding-left: 30px;
+  }
+  #about2 .content .right-box .menu3>p{
+    padding-right: 0;
+  }
+  /* Banner Area Start */
+  #banner p{
+    padding: 0;
+  }
+  /* Contact Area Start */
+  #contact .content .right-box{
+    padding-left: 80px;
+  }
+
+  /* Popup Contents Area */
+  /* popup 공통영역 */
+  .white-popup{
+    padding: 30px;
+    height: auto;
+  }
+  .white-popup .left-box{ width: 100%; }
+  .white-popup .left-box img{ width: 100%; }
+  .white-popup .right-box{
+    float: none;
+    position: static;
+    padding: 0 15px;
+  }
+  .white-popup h2{
+    margin-bottom: 50px;
+  }
+  .white-popup .right-box .text, .white-popup .right-box li{
+    font-size: 1.6rem;
+  }
+  #popup2 .right-box .login, #popup3 .right-box .login{
+    width: 200px;
+    font-size: 1.5rem;
+    line-height: 26px;
+  }
+  .white-popup .right-box .text{
+    margin-bottom: 42px;
+  }
+  .white-popup .right-box p{ margin-bottom: 0; }
+
+  /* popup1 */
+  #popup1 .left-box{
+    margin-bottom: 30px;
+  }
+  #popup1 .right-box{
+    width: 100%;
+    font-size: 1.6rem;
+  }
+  #popup1 .right-box .text span, #popup1 .right-box .text a{
+    font-size: 1.5rem;
+  }
+  /* popup2 */
+  #popup2 .right-box{
+    width: 100%;
+    font-size: 1.6rem;
+  }
+
+
+  /* popup3 */
+  #popup3 .right-box{
+    width: 100%;
+    padding: 30px 15px; 
+  }
+
+}
+
+@media screen and (min-width:960px) and (max-width:1051px){
+  #intro .intro-text{ 
+    left: 15%;
+    top: 43%;
+  }
+}
+
+/* Tablet & Desktop Device */ 
+@media screen and (min-width:768px) and (max-width:959px) {
+
+  /* ***** 레이아웃 구성시작 ***** */
+  .container{ width: 100%; padding: 105px 15px;}
+  .col-md-3{ width: 50%; }
+
+
+  /* ***** 개별영역 구성시작 ***** */
+  #navi .container{ padding: 0 15px; }
+
+  /* Intro Area Start */
+  #intro{ height: 100vh; background-size: cover !important; }
+  #intro .intro-text{
+    left: 10%;
+    top: 43%;
+  }
+  #intro .intro_circle1{
+    width: 450px;
+    height: 450px;
+  }
+  #intro .intro_circle2{
+    width: 300px;
+    height: 300px;
+    margin-right: -40px;
+  }
+  #intro .intro_circle3{
+    width: 200px;
+    height: 200px;
+  }
+  #intro .container-fluid a{
+    margin-left: -101px;
+  }
+
+
+   
+
+  /* about Area Start */
+  #about .right-box{
+    margin-top: 148px;
+  }
+
+  /* About2 Area Start */
+  #about2 .content .img-box{
+    position: relative; left: 50%;
+    margin-left: -222px;
+    margin-bottom: 63px;
+  }
+  #about2 .content .right-box{
+    padding-left: 30px;
+  }
+  
+  /* Contact Area Start */
+  #contact{ padding: 0 15px; }
+  #map_canvas{
+    width: 100%;
+  }
+  #contact .content .right-box{
+    padding-left: 0;
+    margin-top: 63px;
+  }
+
+}
+
+/* Tablet Device */ 
+@media screen and (max-width:767px) {
+
+  /* ***** 레이아웃 구성시작 ***** */
+  .container{ width: 100%; padding: 105px 30px;}
+
+  .col-sm-6{ width: 50%; }
+
+  #footer .container{ padding: 0 15px; }
+
+
+  /* ***** 개별영역 구성시작 ***** */
+  /* Navi Area Start */
+  .navbar-header{ width: 100%; }
+  .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover{
+    border: none;
+    background-color: transparent;
+  }
+
+  #navi h1{ padding-left: 30px; }
+  .navbar-nav{
+    padding-left: 30px;
+  }
+  #navi #gnb{
+    background-color: rgba(246,249,252, 0.8);
+    overflow: hidden;
+    padding-bottom: 21px;
+  }
+  #navi.fixed #gnb li a:hover, #navi #gnb li a:hover{
+    background-color: transparent;
+    color: #7b9acc;
+  }
+
+  /* Intro Area Start */
+  #intro{
+    height: 100vh;
+    background-size: cover !important;
+    background: url(../images/sm/intro_bg.png) no-repeat top center;
+  }
+  #intro .intro_circle1{ width: 400px; height: 400px; }
+  #intro .intro_circle2{ width: 300px; height: 300px; }
+  #intro .intro_circle3{ width: 200px; height: 200px;}
+
+  #intro .intro-text{ left: 114px; margin-top: -60px }
+  #intro .intro-text h2{ 
+    font-size: 7rem;
+    line-height: 1.2;
+  }
+  #intro .intro-text h3{ font-size: 3rem; line-height: 1.2; }
+  #intro .intro-text p{ font-size: 2rem; line-height: 35px; }
+
+  #intro .intro_circle2, #intro .intro_circle3{ margin-right: -130px; }
+
+  /* Projects Area Start */
+  #projects .g-menu li{ width: 330px; margin-bottom: 18px;} 
+  #projects #gallery{ width: 510px; margin: auto; }
+  #projects #gallery .grid-item{
+    width: 48%;
+    margin: 0 1% 24px;
+  }
+
+  /* Content_popup Area Start */
+  .white-popup{
+    height: auto;
+    padding: 30px 15px;
+  }
+  .white-popup .left-box .pdf-btn, .white-popup .close-btn{
+    font-size: 1.3rem;
+  }
+
+  /* Popup1 */
+  #popup1 .pdf-btn{
+    left: 45%;
+  }
+  #popup1 .left-box{ margin-bottom: 30px; }
+  #popup1 .right-box{
+    width: 100%;
+    padding: 30px;
+  }
+
+  /* Popup2 */
+  #popup2 .right-box{
+    position: static;
+  }
+  #popup2 .right-box .login, #popup3 .right-box .login{
+    float: right;
+    width: 200px;
+    font-size: 1.6rem;
+    margin-left: 0;
+  }
+  /* Popup3 */
+  #popup3 .right-box .login{
+    margin-left: 30px;
+  }
+  #popup3 .right-box{
+    width: 100%;
+  }
+
+
+  /* About Area Start */
+  #about .img-box{
+    position: relative; top: -330px; left: 15%;
+    margin-bottom: 63px;
+  } 
+  #about .img-box img{
+    margin: -53px 0 0 -40px;
+  }
+  #about .name{
+    margin-left: 80px;
+  }
+  #about .name p{
+    text-align: center;
+    position: absolute ;
+    top: 400px; 
+    margin-left: -35px;
+  }
+  #about .name p::after{
+    display: block;
+    content: '';
+    width: 170px;
+    height: 4px;
+    background-color: #7b9acc;
+    position: absolute; bottom: -24px;
+    margin-left: 13px;
+  }
+  #about .content .left-box{
+    padding-left: 0;
+    position: relative; top: 460px;
+    width: 80%;
+  }
+  #about .content .left-box .text{
+    width: 100%;
+  }
+  #about .content .right-box{
+    margin-top: 273px;
+    padding: 0;
+  }
+
+  /* whatIdo Area Start */
+  #whatido .content>div{
+    width: 48%;
+    height: 210px;
+  }
+
+  /* About2 Area Start */
+  #about2 .img-box{
+    margin-bottom: 42px;
+  }
+  div#about2 .img-box img{
+    width: 100%;
+  }
+  #about2 .content .left-box{
+    padding-left: 0;
+  }
+  #about2 .content .menu2{
+    float: right;
+    position: absolute; top: 0; right: 0;
+  }
+  /* Banner Area Start */
+  #banner p{
+    font-size: 4rem;
+    padding: 0 50px;
+  }
+  /* Contact Area Start */
+  #map_canvas{
+    width: 100%;
+    height: 294px;
+  }
+  #contact .left-box{
+    margin-bottom: 63px;
+  }
+  #contact .content .right-box{
+    width: 100%;
+    padding-left: 0;
+  }
+  
+}
+
+
+/* Mobile Device */ 
+@media screen and (max-width: 576px) {
+
+  /* 공통영역 구성시작 */
+  .title h2{
+    font-size: 5rem;
+  }
+
+  /* ***** 개별영역 구성시작 ***** */
+  /* Intro Area Start */
+  #intro{
+    height: 100vh;
+    background-size: cover !important;
+    background: url(../images/xs/intro_bg.png) no-repeat top center;
+  }
+  div#intro .intro-text{
+    position: absolute; left: 13%; top: 48%;
+  }
+  #intro .intro-text h2{
+    font-size: 6rem;
+    line-height: 1.5;
+  }
+  #intro .intro-text h3{
+    font-size: 2.1rem;
+    margin-left: 60px;
+  }
+  #intro .intro-text p{
+    font-size: 1.7rem;
+    margin-left: 65px;
+  }
+  
+  #intro .container-fluid a{
+    font-size: 1.8rem;
+    margin-left: -55px;
+  }
+
+  #intro .intro_circle2{
+    width: 270px;
+    height: 270px;
+    top: 65%;
+  }
+
+  /* Projects Area Start */
+  #projects .g-menu li{
+    width: 60%; margin: 0 20% 18px;
+  }
+  #projects #gallery{
+    width: 310px;
+  }
+  #projects #gallery .grid-item{
+    width: 100%;
+    margin: 0 0 24px;
+  }
+
+  #projects #gallery .grid-item .caption h3{
+    font-size: 3.3rem;
+    line-height: 50px;
+  }
+  #projects #gallery .grid-item .caption h3 span{
+    font-size: 2.5rem;
+  }
+  #projects #gallery .grid-item .caption i{
+    font-size: 4.3rem;
+  }
+
+  /* Content_popup Area Start */
+  .white-popup .right-box .text, .white-popup .right-box .pdf-btn, .white-popup .right-box .close-btn{
+    font-size: 1.4rem;
+  }
+  /* popup1 */
+  #popup1 .right-box .text a, .white-popup .right-box .text i{
+    font-size: 1.3rem;
+  }
+  #popup1 .right-box, .white-popup .right-box li{
+    font-size: 1.4rem;
+  }
+
+  .white-popup .right-box p{
+    margin-top: 63px;
+  }
+
+  /* popup2 */
+  #popup2 .left-box{ margin-bottom: 30px; }
+  #popup2 .right-box, #popup3 .right-box{
+    width: 100%;
+    padding: 0;
+  }
+  #popup2 .right-box .login, #popup3 .right-box .login{
+    width: 170px;
+  }
+
+
+  /* About Area Start */
+  #about .img-box img{
+    margin: -140px 0 0 -65px;
+  }
+  
+  #about .name p{
+    left: 63px;
+  }
+  #about .content .left-box{
+    width: 90%;
+    margin: 0 5%;
+  }
+  #about .left-box a{
+    position: relative; left: 100px;
+  } 
+  #about .right-box .skills-title{
+    margin: 0;
+  }
+  /* whatIdo Area Start */
+  #whatido .content>div{
+    width: 80%;
+    height: 210px;
+    margin: 0 auto 21px !important;
+    float: none;
+  }
+
+  /* About2 Area Start */
+  #about2 .content .menu2{
+    float: none;
+    position: static;
+  }
+  /* Banner Area Start */
+  div#banner p{
+    font-size: 3.2rem;
+    padding: 0;
+  }
+  #banner a{
+    width: 140px;
+    font-size: 1.6rem;
+  }
+
+  /* Footer Area Start */
+  #footer p{ 
+    font-size: 1.6rem;
+  }
+  .lightbox_btn{
+    width: 80px;
+    height: 70px;
+    font: 500 1em 'Spoqa Han Sans Neo', sans-serif; 
+  }
+}
